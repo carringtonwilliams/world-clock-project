@@ -7,7 +7,7 @@ function updateTime() {
 
     losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
     losAngelesTimeElement.innerHTML = losAngelesTime.format(
-      "h:mm:ss:SS [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
   let timbuktuElement = document.querySelector("#timbuktu");
@@ -18,7 +18,7 @@ function updateTime() {
 
     timbuktuDateElement.innerHTML = timbuktuTime.format("MMMM Do YYYY");
     timbuktuTimeElement.innerHTML = timbuktuTime.format(
-      "h:mm:ss:SS [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
@@ -28,20 +28,20 @@ function updateCity(event) {
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
-  let cityName = cityTimeZone.replace("_", "").split("/")[1];
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML = ` 
+  citiesElement.innerHTML = `
   <div class="city">
-        <div>
-          <h2>${cityName}</h2>
-          <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
-        </div>
-        <div class="time">${cityTime.format(
-          "h:mm:ss:SS"
-        )}<small>${cityTime.format("A")}</small></div>
-      </div>
-      <a href="/">All cities</a>
+    <div>
+      <h2>${cityName}</h2>
+      <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
+    </div>
+    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
+    "A"
+  )}</small></div>
+  </div>
+   <a href="/">All cities</a>
   `;
 }
 
