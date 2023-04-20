@@ -10,7 +10,7 @@ function updateTime() {
       "h:mm:ss:SS [<small>]A[</small>]"
     );
   }
-  let timbuktuElement = document.querySelector("#timbuktu-time");
+  let timbuktuElement = document.querySelector("#timbuktu");
   if (timbuktuElement) {
     let timbuktuDateElement = timbuktuElement.querySelector(".date");
     let timbuktuTimeElement = timbuktuElement.querySelector(".time");
@@ -29,7 +29,7 @@ function updateCity(event) {
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = ` 
-  <div class="city">
+  <div class="cities">
         <div>
           <h2>${cityName}</h2>
           <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
