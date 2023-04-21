@@ -1,4 +1,5 @@
 function updateTime() {
+    
   // Timbuktu
   let timbuktuElement = document.querySelector("#timbuktu");
   if (timbuktuElement) {

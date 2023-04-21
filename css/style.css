@@ -83,7 +83,7 @@ footer {
   box-shadow: rgba(146, 93, 187, 0.705) 0px 7px 29px 0px;
   background: url("https://i.pinimg.com/originals/95/c3/86/95c3860d485683c4e5b3f5bedbbba02d.gif");
   background-position: center;
-  background-size: 218%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
