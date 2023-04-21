@@ -2,6 +2,7 @@ body {
   background: rgb(229, 206, 247);
   margin-top: -10px;
   font-family: "Hanoble", sans-serif;
+  src: url(Hanoble.otf);
   color: rgb(24, 3, 51);
 }
 
@@ -35,6 +36,7 @@ select {
   margin-bottom: 35px;
   padding: 8px;
   font-family: "Victor Mono", sans-serif;
+  src: url(VictorMono-Regular.otf);
   font-size: 15px;
   font-weight: 550;
 }
@@ -64,14 +66,14 @@ a:hover {
 
 footer {
   font-family: "Victor Mono", sans-serif;
+  src: url(VictorMono-Regular.otf);
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: #913dc9;
-  margin-top: 15px;
 }
 
 .container {
-  max-width: 555px;
+  max-width: 550px;
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 40px;
@@ -88,6 +90,7 @@ footer {
 .default-cities {
   background: white;
   font-family: "Victor Mono", sans-serif;
+  src: url(VictorMono-Regular.otf);
   text-align: left;
   color: rgb(24, 3, 51);
   width: 95%;
