@@ -5,50 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock - Carrington Williams</title>
   </head>
   <body>
     <div class="container">
-      <h1>
-        <a href="index.html">
-        World Clock</h1></a>
-
+      <h1>World Clock</h1>
       <select id="city">
-        <option value="">Select a city..</option>
+        <hr />
+        <div id="cities-list"></div>
+        <option value="">Select a city...</option>
         <option value="current">My current location</option>
         <option value="America/Los_Angeles">Los Angeles</option>
         <option value="Africa/Timbuktu">Timbuktu</option>
         <option value="Africa/Cairo">Cairo</option>
+        <option value="Africa/Lagos">Lagos</option>
       </select>
 
-      <div id="cities">
-        <div class="city" id="los-angeles">
+      <hr />
+      <div id="cities-list">
+        <div class="default-cities" id="los-angeles">
           <div>
-            <h2>Los Angeles 🇺🇸</h2>
+            <h2>Los Angeles</h2>
             <div class="date"></div>
           </div>
-          <div class="time"></div>
+          <div>
+            <div class="time"></div>
+          </div>
         </div>
-        <div class="city" id="timbuktu">
+        <div class="default-cities" id="timbuktu">
           <div>
-            <h2>Timbuktu 🇿🇦</h2>
+            <h2>Timbuktu</h2>
             <div class="date"></div>
           </div>
-          <div class="time"></div>
+          <div>
+            <div class="time"></div>
+          </div>
+        </div>
+        <div class="default-cities" id="cairo">
+          <div>
+            <h2>Cairo</h2>
+            <div class="date"></div>
+          </div>
+          <div>
+            <div class="time"></div>
+          </div>
+        </div>
+        <div class="default-cities" id="lagos">
+          <div>
+            <h2>Lagos</h2>
+            <div class="date"></div>
+          </div>
+          <div>
+            <div class="time"></div>
+          </div>
         </div>
       </div>
+      <hr class="bottom-line" />
+      <div class="current-location">Your current location ↓</div>
+      <div class="default-cities" id="position">
+        <div>
+          <h2 id="name"></h2>
+          <div class="date" id="date"></div>
+        </div>
+        <div class="time" id="time"></div>
+      </div>
     </div>
+
     <footer>
-      This project was coded with 💖 by <strong>Carrington Williams</strong> and
-      is
       <a
         href="https://github.com/carringtonwilliams/World-Clock"
         target="_blank"
       >
-        open sourced on GitHub</a
+        An open-sourced project</a
       >
+      coded by <strong>Carrington Williams</strong> using HTML, CSS, &
+      Javascript ♥
     </footer>
     <script src="javascript/index.js"></script>
   </body>
