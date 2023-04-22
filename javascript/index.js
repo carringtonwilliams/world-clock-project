@@ -1,5 +1,4 @@
 function updateTime() {
-    
   // Timbuktu
   let timbuktuElement = document.querySelector("#timbuktu");
   if (timbuktuElement) {
@@ -40,6 +39,9 @@ function updateTime() {
 function changeCity(event) {
   function updateChangeTime() {
     let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+    }
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
     let citiesElement = document.querySelector("#cities-list");
@@ -55,8 +57,6 @@ function changeCity(event) {
       )}<small>${cityTime.format(" A")}</small></div>
           </div>
           </div>
-        <div class="all-cities-link">
-      <a href="https://carringtons-world-clock.netlify.app/"> Back to home </a> </div>
     `;
   }
   updateChangeTime();
@@ -82,6 +82,14 @@ setInterval(updateCurrentTime, 10);
 updateTime();
 setInterval(updateTime, 10);
 
+function showLink() {
+  let backLink = document.querySelector(".all-cities-link");
+  backLink.innerHTML = `<a href="javascript:window.location.reload(true)"> Back to home </a> </div>`;
+}
+
 let citiesSelectElement = document.querySelector("#city");
 
-citiesSelectElement.addEventListener("change", changeCity);
+citiesSelectElement.addEventListener("change", (e) => {
+  changeCity(e);
+  showLink();
+});
