@@ -7,7 +7,7 @@ function updateTime() {
     let timbuktuTime = moment().tz("Africa/Timbuktu");
     timbuktuDateElement.innerHTML = timbuktuTime.format("MMMM Do YYYY");
     timbuktuTimeElement.innerHTML = timbuktuTime.format(
-      "h:mm:ss:SS [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 
@@ -19,7 +19,7 @@ function updateTime() {
     let cairoTime = moment().tz("Africa/Cairo");
     cairoDateElement.innerHTML = cairoTime.format("MMMM Do YYYY");
     cairoTimeElement.innerHTML = cairoTime.format(
-      "h:mm:ss:SS [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 
@@ -31,7 +31,7 @@ function updateTime() {
     let lagosTime = moment().tz("Africa/Lagos");
     lagosDateElement.innerHTML = lagosTime.format("MMMM Do YYYY");
     lagosTimeElement.innerHTML = lagosTime.format(
-      "h:mm:ss:SS [<small>]A[</small>]"
+      "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
@@ -52,9 +52,9 @@ function changeCity(event) {
         <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
       </div>
       <div>
-      <div class="time">${cityTime.format(
-        "h:mm:ss:SS"
-      )}<small>${cityTime.format(" A")}</small></div>
+      <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+      " A"
+    )}</small></div>
           </div>
           </div>
     `;
@@ -74,7 +74,7 @@ function updateCurrentTime() {
     .format("MMMM Do YYYY")}`;
   cityPositionTime.innerHTML = `${moment()
     .tz(currentPosition)
-    .format("h:mm:ss:SS [<small>]A[</small>]")}`;
+    .format("h:mm:ss [<small>]A[</small>]")}`;
 }
 updateCurrentTime();
 setInterval(updateCurrentTime, 10);
