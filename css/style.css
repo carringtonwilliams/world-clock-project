@@ -1,6 +1,6 @@
 @font-face {
   font-family: "victor mono";
-  src: url("../assets/fonts/victormono-bold.woff");
+  src: url("../assets/fonts/victormono-regular-webfont.woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -135,16 +135,17 @@ footer {
 .all-cities-link {
   display: block;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 45px;
+  margin-bottom: 20px;
   padding: 5px 5px 5px;
   text-align: center;
   text-decoration: none;
   color: rgb(24, 3, 51);
   font-size: 18px;
-  background: white;
-  border: 1px solid rgb(234, 205, 244);
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(234, 205, 244, 0);
   border-radius: 15px;
-  box-shadow: rgba(146, 93, 187, 0.705) 0px 7px 29px 0px;
+  box-shadow: rgba(146, 93, 187, 0) 0px 7px 29px 0px;
   max-width: 25%;
 }
 
