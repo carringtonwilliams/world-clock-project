@@ -1,8 +1,7 @@
 @font-face {
-  font-family: "Victor Mono";
-  src: url("assets/fonts/VictorMono-Regular.woff") format("woff2"),
-    url("assets/fonts/VictorMono-Regular.woffw") format("woff");
-  font-weight: normal;
+  font-family: "victor mono";
+  src: url(victormono-regular-webfont.woff2);
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -43,7 +42,7 @@ select {
   box-shadow: rgba(146, 93, 187, 0.705) 0px 7px 29px 0px;
   margin-bottom: 35px;
   padding: 8px;
-  font-family: "Victor mono", sans-serif;
+  font-family: "Victor Mono", sans-serif;
   font-size: 15px;
   font-weight: 550;
 }
@@ -72,7 +71,7 @@ a:hover {
 }
 
 footer {
-  font-family: "Victor mono", sans-serif;
+  font-family: "Victor Mono", sans-serif;
   text-align: center;
   font-size: 12px;
   color: #913dc9;
@@ -95,7 +94,7 @@ footer {
 
 .default-cities {
   background: white;
-  font-family: "Victor mono", sans-serif;
+  font-family: "Victor Mono", sans-serif;
   text-align: left;
   color: rgb(24, 3, 51);
   width: 92%;
